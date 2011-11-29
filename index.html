@@ -1,0 +1,54 @@
+<!doctype html> 
+<html> 
+    <head> 
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+        <script src="cuttherope.js" type="text/javascript"></script> 
+        <title>Cuttherope</title> 
+        <style type="text/css" media="screen"> 
+            body {
+                font-family: Helvetica, Arial, sans-serif;
+                font-size: 10pt;
+                background: #ddd;
+            }
+            h1 {
+                text-align: center;
+                text-shadow: 0 2px 1px #fff;
+            }
+            #cuttherope_app {
+                border: 1px solid #000;
+                width: 640px;
+                height: 960px;
+                margin: 0 20px;
+                -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.75);
+                -moz-box-shadow:    0 3px 10px rgba(0, 0, 0, 0.75);
+                -o-box-shadow:      0 3px 10px rgba(0, 0, 0, 0.75);
+                box-shadow:         0 2px 2px  rgba(0, 0, 0, 0.75);
+            }
+            #debug-canvas {
+                display: none;
+                position: absolute;
+                left: 29px;
+                top: 66px;
+            }
+            li {
+            float:left;
+            }
+        </style> 
+        <script type="text/javascript">
+        var global_stage = null;
+        </script> 
+    </head> 
+    <body> 
+        <h1>Cuttherope</h1> 
+        
+        <canvas id="debug-canvas" width="600" height="400"></canvas>
+       <!--  <div id="cuttherope_app" ontouchmove="global_stage.mouseDragged(event);" ontouchstart="global_stage.mouseDown(event);" ontouchend="global_stage.mouseUp(event);"></div> 
+       -->
+       <div id="cuttherope_app"></div> 
+       <ul>
+        <li><button onclick="global_stage.cut_by_id(1);">切断1绳</button></li>
+        <li><button onclick="global_stage.cut_by_id(2);">切断2绳</button></li>
+        <li><button onclick="global_stage.cut_by_id(3);">切断3绳</button></li>
+        </ul>
+    </body> 
+</html> 
