@@ -32879,6 +32879,9 @@ var Cuttherope = cocos.nodes.Layer.extend({
 	},
 	cut_by_id: function(id) {
 		this.nails[id-1].cut_force();
+	},
+	gameover: function() {
+		this.cleanup();
 	}
 });
 
@@ -32909,6 +32912,7 @@ exports.main = function() {
 function winGame() {
     CuttheropeMainStage.frogEat.get('picture').set('visible', false);
     CuttheropeMainStage.frog.get('picture').set('visible', true);
+    CuttheropeMainStage.gameover();
     showFinishWindow(CuttheropeMainStage.getStars);
 }
 
